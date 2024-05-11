@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+admin.site.site_header = "cakeee"
+admin.site.site_title = "cakeee"
+admin.site.index_title = "cakeee"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    # path('about', include('home.urls')),
-    # path('cakes', include('home.urls')),
+    path('home', include('home.urls')),
     path('order', include('order.urls'))
-    # path('', .site.urls)
 ]
